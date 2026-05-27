@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Memory Master</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="home">
+      <h1>Memory Master 🎮</h1>
+
+      <p>Professional Multiplayer Memory Game</p>
+
+      <input type="text" id="playerName" placeholder="Enter Your Name" />
+
+      <br /><br />
+
+      <button onclick="startGame()">Play Now</button>
+
+      <br /><br />
+
+      <a href="leaderboard.html">
+        <button>Leaderboard</button>
+      </a>
+    </div>
+
+    <script>
+      function startGame() {
+        const name = document.getElementById("playerName").value;
+
+        if (name === "") {
+          alert("Enter your name");
+
+          return;
+        }
+
+        localStorage.setItem("playerName", name);
+
+        window.location = "game.html";
+      }
+    </script>
+  </body>
+</html>

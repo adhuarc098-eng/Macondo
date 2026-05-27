@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Leaderboard</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Leaderboard 🏆</h1>
+
+      <div id="scores"></div>
+
+      <br />
+
+      <a href="index.html">
+        <button>Home</button>
+      </a>
+    </div>
+
+    <script>
+      const scoresDiv = document.getElementById("scores");
+
+      let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+
+      leaderboard.sort((a, b) => b.score - a.score);
+
+      leaderboard.forEach((player) => {
+        scoresDiv.innerHTML += `
+
+<div class="leaderboard">
+
+<h2>${player.name}</h2>
+
+<p>Score: ${player.score}</p>
+
+</div>
+
+<br>
+
+`;
+      });
+    </script>
+  </body>
+</html>
