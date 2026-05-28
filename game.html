@@ -1,38 +1,36 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Memory Game</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-  <body>
-    <div class="container">
-      <h1>Memory Master</h1>
+<div class="bg"></div>
 
-      <h2 id="welcome"></h2>
+<div class="container">
 
-      <div class="top-bar">
-        <div class="box">Score: <span id="score">0</span></div>
+<h1>Memory Puzzle Arena</h1>
 
-        <div class="box">Moves: <span id="moves">0</span></div>
+<div class="topbar">
+<div class="box">Player: <span id="player"></span></div>
+<div class="box">Score: <span id="score">0</span></div>
+<div class="box">Moves: <span id="moves">0</span></div>
+</div>
 
-        <div class="box">Time: <span id="timer">60</span>s</div>
-      </div>
+<div class="board" id="board"></div>
 
-      <div class="game-board" id="gameBoard"></div>
+<div class="buttons">
+<a href="index.html"><button>Home</button></a>
+<a href="leaderboard.html"><button>Leaderboard</button></a>
+</div>
 
-      <br />
+</div>
 
-      <a href="leaderboard.html">
-        <button>Leaderboard</button>
-      </a>
+<script src="js/game.js"></script>
 
-      <a href="index.html">
-        <button>Home</button>
-      </a>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
