@@ -17,3 +17,5 @@ window.location.href="game.html";
 document.getElementById("leaderboardBtn").addEventListener("click",()=>{
 window.location.href="leaderboard.html";
 });
+
+
